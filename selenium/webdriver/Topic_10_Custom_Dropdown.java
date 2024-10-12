@@ -35,7 +35,7 @@ public class Topic_10_Custom_Dropdown {
 
     @Test
     public void TC_01_Custom_Dropdown() {
-        driver.get("https://jqueryui.com/selectmenu/");
+        driver.get("https://jqueryui.com/resources/demos/selectmenu/default.html");
         driver.findElement(By.cssSelector("span#number-button")).click();
         SleepInseccond(5);
         explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//ul[@id='number-menu']//div")));

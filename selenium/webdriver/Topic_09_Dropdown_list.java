@@ -36,10 +36,10 @@ public class Topic_09_Dropdown_list {
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+        driver.get("https://demo.nopcommerce.com/");
     }
     @Test
     public void TC_01_Register() {
-        driver.get("https://demo.nopcommerce.com/");
         driver.findElement(By.xpath("//a[@class='ico-register']")).click();
         driver.findElement(By.xpath("//input[@id='FirstName']")).sendKeys(Firstname);
         driver.findElement(By.xpath("//input[@id='LastName']")).sendKeys(Lastname);
