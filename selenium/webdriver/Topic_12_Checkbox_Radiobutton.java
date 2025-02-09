@@ -86,13 +86,16 @@ public void TC_03_AllCheckbox(){
 
     driver.manage().deleteAllCookies();
     driver.navigate().refresh();
-    for (WebElement checkbox: AllCheckbox){
-        if (checkbox.getAttribute("value").equals("Heart Disease")&&!checkbox.isSelected()){
+    SleepInseccond(2);
+    List<WebElement> AllCheckbox2 = driver.findElements(By.xpath("//div[@class='form-single-column']//input[@type='checkbox']"));
+
+    for (WebElement checkbox: AllCheckbox2){
+        if (checkbox.getAttribute("value").equals("Heart Disease") && !checkbox.isSelected()){
             checkbox.click();
             SleepInseccond(1);
         }
     }
-    for (WebElement checkbox: AllCheckbox){
+    for (WebElement checkbox: AllCheckbox2){
         if (checkbox.getAttribute("value").equals("Heart Disease")){
         Assert.assertTrue(checkbox.isSelected());
         }
